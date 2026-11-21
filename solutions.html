@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Solutions · ArisAI</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@300;400;500;600&family=Inter:wght@500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#040b1c;--text:#eef4ff;--muted:#a9bbd9;--cyan:#22d3ee;--gold:#f2c46d;--line:rgba(110,180,255,.22);--card:rgba(16,34,72,.55)}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:radial-gradient(900px 600px at 80% 0%,rgba(40,90,200,.35),transparent 65%),radial-gradient(700px 500px at 0% 40%,rgba(120,80,220,.12),transparent 70%),var(--bg);
+  color:var(--text);font-family:"IBM Plex Sans Thai",Inter,system-ui,sans-serif;line-height:1.7;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1000px;margin:0 auto;padding:0 24px}
+a{color:var(--cyan)}
+nav{border-bottom:1px solid rgba(110,180,255,.12)}
+nav .wrap{display:flex;align-items:center;height:60px;justify-content:space-between}
+nav b{font:800 17px Inter;letter-spacing:.02em}
+nav .r{display:flex;align-items:center;gap:14px;font-size:14px}
+nav .r a{text-decoration:none;color:#dbe6f8}nav .r a.on{color:var(--cyan)}
+.lang{background:none;border:1px solid rgba(110,180,255,.35);color:#dbe6f8;border-radius:999px;padding:4px 12px;font:500 13px Inter;cursor:pointer}
+header{padding:56px 0 26px}
+.k{font:500 12px Inter;letter-spacing:.32em;color:var(--cyan)}
+h1{font-size:clamp(30px,5vw,46px);line-height:1.25;font-weight:600;margin:12px 0 14px}
+h1 em{font-style:normal;background:linear-gradient(90deg,#5fd8ff,#22d3ee);-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{font-size:17px;color:#cfdbf0;max-width:760px}
+section{padding:26px 0}
+h2{font-size:23px;font-weight:600;margin-bottom:14px}
+h2 small{display:block;font:500 11.5px Inter;letter-spacing:.28em;color:var(--cyan);margin-bottom:4px}
+p{color:#d3def2;margin-bottom:10px}
+.tag{display:inline-block;font-size:12px;border-radius:999px;padding:2px 12px;margin-left:8px;vertical-align:middle}
+.tag.live{color:#7df0b4;border:1px solid rgba(94,230,160,.5)}.tag.dev{color:var(--gold);border:1px solid rgba(242,196,109,.5)}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.g3{grid-template-columns:repeat(3,1fr)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px}
+.card h3{font-size:16px;font-weight:600;margin-bottom:4px}
+.card p{font-size:14px;margin:0;color:var(--muted)}
+.card .ic{font-size:22px;margin-bottom:6px}
+.feat{display:grid;grid-template-columns:1.1fr .9fr;gap:22px;align-items:center}
+.feat ul{list-style:none}.feat li{padding:8px 0 8px 26px;position:relative;color:#d3def2;border-bottom:1px solid rgba(110,180,255,.1)}
+.feat li::before{content:"";position:absolute;left:4px;top:16px;width:9px;height:9px;border-radius:50%;background:var(--cyan);box-shadow:0 0 8px var(--cyan)}
+.shots{display:grid;grid-template-columns:2.2fr 1fr;gap:12px;align-items:end}
+.shots img{width:100%;border-radius:10px;border:1px solid var(--line);box-shadow:0 14px 40px rgba(0,0,0,.5)}
+.steps{counter-reset:s;display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.steps .card{position:relative;padding-top:42px}
+.steps .card::before{counter-increment:s;content:counter(s);position:absolute;left:18px;top:12px;font:800 22px Inter;color:var(--cyan)}
+.box{border-left:3px solid var(--gold);background:rgba(242,196,109,.06);padding:14px 18px;border-radius:0 12px 12px 0}
+.no{display:flex;flex-wrap:wrap;gap:10px}.no span{border:1px solid rgba(255,120,120,.35);color:#ffc9c9;border-radius:999px;padding:5px 14px;font-size:14px}
+.cta{margin-top:20px;display:inline-flex;align-items:center;gap:10px;border-radius:999px;padding:12px 24px;font-weight:600;color:#04152d;background:linear-gradient(90deg,#20cdee,#3cc6f4);box-shadow:0 0 22px rgba(34,211,238,.5)}
+.cta small{font-weight:500;opacity:.75}
+footer{margin-top:30px;border-top:1px solid rgba(110,180,255,.12);padding:22px 0 30px;font-size:12.5px;color:var(--muted)}
+@media(max-width:760px){.wrap{padding:0 16px}.grid,.g3,.feat,.steps,.shots{grid-template-columns:1fr}nav .r a.hide{display:none}}
+</style>
+</head>
+<body>
+<nav><div class="wrap"><b>NEXSPARC</b><div class="r">
+<a class="hide" id="home" href="index.html"><span class="tr" data-en="Home">หน้าแรก</span></a>
+<a class="hide on" href="solutions.html"><span class="tr" data-en="Solutions">โซลูชัน</span></a>
+<a class="hide" href="business.html"><span class="tr" data-en="Business">สำหรับองค์กร</span></a>
+<a class="hide" href="npmt.html">NPMT</a>
+<button class="lang" id="lang" type="button">🌐 <span id="lc">TH</span></button></div></div></nav>
+
+<header class="wrap">
+  <div class="k">SOLUTIONS</div>
+  <h1><span class="tr" data-en="One assistant who &lt;em&gt;knows you&lt;/em&gt; —&lt;br&gt;and brings in the right expert when you need one">ผู้ช่วยหนึ่งเดียวที่<em>รู้จักคุณ</em><br>และเรียกผู้เชี่ยวชาญมาช่วยเมื่อต้องการ</span></h1>
+  <p class="lead"><span class="tr" data-en="Aris is an AI life companion that helps you set goals, practise until you see real results, and remember what matters to you for years. When something needs specialist knowledge, Aris works with an “expert agent” for you — and you keep talking to the same Aris.">Aris เป็นเพื่อนคู่ชีวิตแบบ AI ที่ช่วยตั้งเป้าหมาย ฝึกจนเห็นผลจริง และจดจำเรื่องสำคัญของคุณได้ยาวนานหลายปี เมื่อเรื่องไหนต้องใช้ความรู้เฉพาะทาง Aris จะทำงานร่วมกับ “เอเจนต์ผู้เชี่ยวชาญ” ให้ โดยคุณคุยกับ Aris คนเดิมตลอด</span></p>
+</header>
+
+<section class="wrap">
+  <h2><small>01 · ARIS</small><span class="tr" data-en="Aris — your personal assistant">Aris — ผู้ช่วยประจำตัว</span><span class="tag live"><span class="tr" data-en="working today in the prototype">ใช้ได้แล้วในต้นแบบ</span></span></h2>
+  <div class="feat">
+    <ul>
+      <li><span class="tr" data-en="Natural spoken Thai, on iPhone and Mac">คุยภาษาไทยเป็นธรรมชาติด้วยเสียง บน iPhone และ Mac</span></li><li><span class="tr" data-en="Daily life: appointments, medicine reminders, news briefings, music and radio">ดูแลชีวิตประจำวัน: เตือนนัด เตือนกินยา สรุปข่าว เปิดเพลงและวิทยุ</span></li><li><span class="tr" data-en="Health: reads WHOOP and watch data and shows trends against your own baseline">สุขภาพ: อ่านค่าจาก WHOOP และนาฬิกา บอกแนวโน้มเทียบกับค่าของตัวเอง</span></li><li><span class="tr" data-en="Memories: the 4D Memory Explorer brings a lifetime of photos together to search and revisit by time">ความทรงจำ: 4D Memory Explorer รวมรูปทั้งชีวิตให้ค้นและย้อนดูตามเวลา</span></li><li><span class="tr" data-en="Hand-gesture control — easy for older adults and when your hands are busy">สั่งงานด้วยท่ามือได้ เหมาะกับผู้สูงวัย และเวลามือไม่ว่าง</span></li>
+    </ul>
+    <div class="shots"><img src="clips/desk/1-home.jpg" alt="ArisAI Desktop"><img src="clips/phone/2-menu.jpg" alt="ArisAI iPhone"></div>
+  </div>
+</section>
+
+<section class="wrap">
+  <h2><small>02 · EXPERT AGENTS</small><span class="tr" data-en="Expert agents">เอเจนต์ผู้เชี่ยวชาญ</span><span class="tag dev"><span class="tr" data-en="in development">กำลังพัฒนา</span></span></h2>
+  <p><span class="tr" data-en="Each agent is designed with an expert or brand in its field, with clear limits on what it advises.">แต่ละเอเจนต์ออกแบบร่วมกับผู้เชี่ยวชาญหรือแบรนด์ในสาขานั้น และมีขอบเขตคำแนะนำชัดเจน</span></p>
+  <div class="grid g3">
+    <div class="card"><div class="ic">💙</div><h3 class="tr" data-en="NPMT Health · pilot agent">NPMT Health · เอเจนต์นำร่อง</h3><p class="tr" data-en="Health and well-being, designed on the &lt;a href=&quot;npmt.html&quot;&gt;NPMT&lt;/a&gt; research framework">สุขภาพและความเป็นอยู่ที่ดี ออกแบบตามกรอบวิจัย <a href="npmt.html">NPMT</a></p></div><div class="card"><div class="ic">🏃</div><h3 class="tr" data-en="Fitness">ฟิตเนส</h3><p class="tr" data-en="Training plans and fitness tracking">วางแผนฝึกและติดตามสมรรถภาพ</p></div><div class="card"><div class="ic">🌿</div><h3 class="tr" data-en="Active longevity">อายุยืนอย่างแข็งแรง</h3><p class="tr" data-en="Long-term healthy routines">กิจวัตรสุขภาพระยะยาว</p></div><div class="card"><div class="ic">🥗</div><h3 class="tr" data-en="Food &amp;amp; nutrition">อาหารและโภชนาการ</h3><p class="tr" data-en="Meal logging and energy estimates">บันทึกมื้ออาหาร ประมาณพลังงาน</p></div><div class="card"><div class="ic">✈️</div><h3 class="tr" data-en="Travel">ท่องเที่ยว</h3><p class="tr" data-en="Planning and help during your trip">วางแผนและช่วยระหว่างทริป</p></div><div class="card"><div class="ic">✨</div><h3 class="tr" data-en="Image · beauty · trends · gaming · self-improvement">บุคลิกภาพ · ความงาม · เทรนด์ · เกม · พัฒนาตนเอง</h3><p class="tr" data-en="Agents for the topics people care about, built with real experts">เอเจนต์ในสาขาที่ผู้ใช้สนใจ ร่วมกับผู้เชี่ยวชาญตัวจริง</p></div>
+  </div>
+</section>
+
+<section class="wrap">
+  <h2><small>03 · HOW IT WORKS</small><span class="tr" data-en="How you start">เริ่มต้นอย่างไร</span></h2>
+  <div class="steps">
+    <div class="card"><h3 class="tr" data-en="Say what you want">บอกสิ่งที่อยากได้</h3><p class="tr" data-en="Four questions or fewer and you can begin">ตอบไม่เกิน 4 คำถาม ก็เริ่มได้</p></div><div class="card"><h3 class="tr" data-en="See an early win">เห็นผลแรกเร็ว</h3><p class="tr" data-en="Then milestones at 7–14, 30 and 90 days, each with evidence of progress">แล้วมีเป้าหมายต่อเนื่อง 7–14 วัน → 30 วัน → 90 วัน พร้อมหลักฐานความคืบหน้า</p></div><div class="card"><h3 class="tr" data-en="Your memory is yours">ความจำเป็นของคุณ</h3><p class="tr" data-en="View, edit or delete it any time">ดู แก้ หรือลบได้เสมอ</p></div>
+  </div>
+</section>
+
+<section class="wrap">
+  <h2><small>OUR PROMISE</small><span class="tr" data-en="What we never do">สิ่งที่เราไม่ทำ</span></h2>
+  <div class="no"><span><span class="tr" data-en="No pressure to keep using it">ไม่กดดันให้ใช้งาน</span></span><span><span class="tr" data-en="No made-up memories or numbers">ไม่แต่งความจำหรือตัวเลขขึ้นเอง</span></span><span><span class="tr" data-en="No medical diagnosis">ไม่วินิจฉัยโรค</span></span></div>
+</section>
+
+<footer><div class="wrap"><span class="tr" data-en="© 2026 NEXSPARC Intelligence · ArisAI is a working prototype in daily use, being developed in Thailand">© 2026 NEXSPARC Intelligence · ArisAI เป็นต้นแบบที่ใช้งานจริงทุกวัน และกำลังพัฒนาในประเทศไทย</span></div></footer>
+<script>
+(function(){var cur='th',els=[].slice.call(document.querySelectorAll('.tr'));
+els.forEach(function(e){e.dataset.th=e.innerHTML;});
+function set(l){cur=l;document.documentElement.lang=l;els.forEach(function(e){e.innerHTML=l==='en'?e.dataset.en:e.dataset.th;});
+ document.getElementById('lc').textContent=l.toUpperCase();document.getElementById('home').href=l==='en'?'en.html':'index.html';try{localStorage.setItem('lang',l);}catch(e){}}
+document.getElementById('lang').onclick=function(){set(cur==='th'?'en':'th');};
+var q=(new URLSearchParams(location.search)).get('lang'),s=null;try{s=localStorage.getItem('lang');}catch(e){}
+set(q==='en'||q==='th'?q:(s||((navigator.language||'').toLowerCase().indexOf('th')===0?'th':'en')));})();
+</script>
+</body>
+</html>

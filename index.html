@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>ArisAI · NEXSPARC Intelligence</title>
+<meta name="description" content="ArisAI — a Thai-language voice assistant by NEXSPARC Intelligence.">
+<script>/* phones get the readable HTML version */ if (window.innerWidth < 760) location.replace('m.html' + location.hash);</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600&family=Inter:wght@500&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{background:#030a1a;overflow-x:hidden}
+  body{font-family:"IBM Plex Sans Thai",system-ui,sans-serif;color:#f1f6ff;-webkit-font-smoothing:antialiased}
+  /* the page is บอส's design picture (1099 x 1431) with live parts laid on top at the same pixels */
+  .fit{position:relative;margin:0 auto;width:1099px;height:1431px;transform-origin:top center}
+  .stage{position:absolute;inset:0;background:url(page.jpg) 0 0/1099px 1431px no-repeat}
+  .o{position:absolute;display:flex;align-items:center;justify-content:center;white-space:nowrap}
+  a.o{cursor:pointer;color:inherit;text-decoration:none}
+  .hot{border-radius:999px}
+  .hot:hover{background:rgba(120,190,255,.10)}
+  .card-hot{border-radius:18px}
+  .card-hot:hover{box-shadow:0 0 0 2px rgba(34,211,238,.6),0 0 24px rgba(34,211,238,.35)}
+
+  .btn-nav{left:927px;top:12px;width:146px;height:38px;border-radius:999px;font-size:13px;font-weight:500;
+    border:1.5px solid #29d3f2;background:rgba(18,90,170,.35);box-shadow:0 0 14px rgba(34,211,238,.55),inset 0 0 10px rgba(34,211,238,.18)}
+  .btn1{left:80px;top:369px;width:193px;height:43px;border-radius:999px;font-size:14px;font-weight:600;color:#04152d!important;gap:9px;
+    background:linear-gradient(90deg,#20cdee,#36c3f3);box-shadow:0 0 26px rgba(34,211,238,.6)}
+  .btn1 i{width:18px;height:18px;border-radius:50%;background:#04152d;position:relative}
+  .btn1 i::after{content:"";position:absolute;left:7px;top:5px;border-left:6px solid #2ad0ef;border-top:4px solid transparent;border-bottom:4px solid transparent}
+  .btn2{left:289px;top:369px;width:173px;height:43px;border-radius:999px;font-size:14px;font-weight:500;border:1.5px solid rgba(215,232,255,.75);background:rgba(6,16,40,.35)}
+  .plat{left:92px;top:430px;height:20px;gap:30px;font:500 11.5px Inter;color:#d7e1f2;justify-content:flex-start}
+  .plat span{display:flex;align-items:center;gap:7px}
+  .plat svg{width:14px;height:14px;fill:currentColor}
+  .tile{left:572px;top:703px;width:91px;height:63px;border-radius:7px;flex-direction:column;gap:6px;font-size:9px;
+    background:linear-gradient(180deg,#2a4076,#1c2d5c);border:1px solid rgba(150,195,255,.45);color:#fff}
+  .tile svg{width:19px;height:19px;stroke:#fff;fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+  .c1{left:59px;top:1013px;font-size:12.4px;color:#d2dcef;justify-content:flex-start}
+  .c5{left:890px;top:995px;flex-direction:column;align-items:flex-start;font-size:12.4px;line-height:1.5;color:#d2dcef}
+  .soon{left:890px;top:1042px;font-size:10.5px;color:#2ad0ef;border:1px solid rgba(42,208,239,.65);border-radius:999px;padding:1px 9px}
+  .btn3{left:833px;top:1284px;width:191px;height:39px;border-radius:999px;font-size:13px;font-weight:600;color:#04152d;gap:14px;
+    background:linear-gradient(90deg,#20cdee,#3cc6f4);box-shadow:0 0 22px rgba(34,211,238,.55)}
+  .npmt{left:838px;top:1334px;width:181px;height:18px;font-size:10.5px;color:#9fe7ff;text-decoration:underline;text-underline-offset:2px}
+  .play{height:22px;padding:0 10px;border-radius:999px;font-size:11px;font-weight:600;color:#04152d;background:linear-gradient(90deg,#20cdee,#3cc6f4);box-shadow:0 0 14px rgba(34,211,238,.6);gap:5px;pointer-events:none;animation:pp 2.4s ease-in-out infinite}
+  @keyframes pp{50%{box-shadow:0 0 22px rgba(34,211,238,.95)}}
+  /* บอส 21 พ.ย.: the phone in the picture plays the real iPhone screenshots by itself, one after another */
+  .phscreen{position:absolute;left:787px;top:546px;width:135px;height:278px;border-radius:17px;overflow:hidden;transform:rotate(-1.3deg);transform-origin:center;background:#000;pointer-events:none;box-shadow:inset 0 0 0 1px rgba(255,255,255,.08)}
+  .phscreen img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top;opacity:0;transition:opacity .6s}
+  .phscreen img.on{opacity:1}
+  .foot{left:952px;top:1394px;font-size:11px;color:#9fb0cc}
+</style>
+</head>
+<body>
+<div class="fit" id="fit">
+  <div class="stage" role="img" aria-label="ArisAI — ผู้ช่วยอัจฉริยะ ที่อยู่เคียงข้างคุณในทุกวันของชีวิต"></div>
+
+  <!-- nav hot spots (the words are in the picture) -->
+  <a class="o hot" href="#" style="left:263px;top:16px;width:76px;height:31px" aria-label="หน้าแรก"></a>
+  <a class="o hot" href="#features" style="left:345px;top:16px;width:62px;height:31px" aria-label="ArisAI"></a>
+  <a class="o hot" href="solutions.html" style="left:414px;top:16px;width:64px;height:31px" aria-label="โซลูชัน"></a>
+  <a class="o hot" href="business.html" style="left:486px;top:16px;width:96px;height:31px" aria-label="สำหรับองค์กร"></a>
+  <a class="o hot" href="#about" style="left:592px;top:16px;width:82px;height:31px" aria-label="เกี่ยวกับเรา"></a>
+  <a class="o hot" href="en.html" style="left:846px;top:16px;width:66px;height:31px" aria-label="English" title="English"></a>
+  <span class="o btn-nav">เปิดทดลองใช้เร็วๆ นี้</span>
+
+  <!-- hero: honest buttons + platforms over the cleaned picture -->
+  <a class="o btn1" href="#features" data-tour="all"><i></i>ดูตัวอย่างการใช้งาน</a>
+  <span class="o btn2">เปิดทดลองใช้เร็วๆ นี้</span>
+  <div class="o plat">
+    <span><svg viewBox="0 0 24 24"><path d="M16.4 12.6c0-2.4 2-3.6 2.1-3.7-1.1-1.7-2.9-1.9-3.5-1.9-1.5-.2-2.9.9-3.7.9-.8 0-1.9-.9-3.2-.8-1.6 0-3.2 1-4 2.5-1.7 3-.4 7.4 1.2 9.8.8 1.2 1.8 2.5 3 2.4 1.2 0 1.7-.8 3.1-.8 1.5 0 1.9.8 3.2.8 1.3 0 2.2-1.2 3-2.4.9-1.4 1.3-2.7 1.3-2.8-.1 0-2.5-1-2.5-4M14 5.6c.7-.8 1.1-1.9 1-3-1 0-2.1.6-2.8 1.4-.6.7-1.2 1.8-1 2.9 1.1.1 2.1-.5 2.8-1.3"/></svg>macOS</span>
+    <span><svg viewBox="0 0 24 24"><path d="M16.4 12.6c0-2.4 2-3.6 2.1-3.7-1.1-1.7-2.9-1.9-3.5-1.9-1.5-.2-2.9.9-3.7.9-.8 0-1.9-.9-3.2-.8-1.6 0-3.2 1-4 2.5-1.7 3-.4 7.4 1.2 9.8.8 1.2 1.8 2.5 3 2.4 1.2 0 1.7-.8 3.1-.8 1.5 0 1.9.8 3.2.8 1.3 0 2.2-1.2 3-2.4.9-1.4 1.3-2.7 1.3-2.8-.1 0-2.5-1-2.5-4M14 5.6c.7-.8 1.1-1.9 1-3-1 0-2.1.6-2.8 1.4-.6.7-1.2 1.8-1 2.9 1.1.1 2.1-.5 2.8-1.3"/></svg>iOS</span>
+  </div>
+
+  <a class="o card-hot" data-tour="desk" href="#" style="left:140px;top:482px;width:640px;height:330px;border-radius:22px" aria-label="ดูตัวอย่างการใช้งาน"></a>
+  <a class="o card-hot" data-tour="phone" href="#" style="left:776px;top:540px;width:162px;height:288px;border-radius:26px" aria-label="ภาพหน้าจอ iPhone"></a>
+  <div class="phscreen" id="phs"></div>
+  <!-- laptop tile 3 (was "โทรหาครอบครัว", not built yet) -->
+  <div class="o tile"><svg viewBox="0 0 24 24"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>เปิดเพลงให้ฟัง</div>
+
+  <!-- feature cards: whole card is a hot spot (clips come later) -->
+  <span id="features" style="position:absolute;top:840px"></span>
+  <span class="o play" style="left:618px;top:492px">▶ ชมการทำงาน</span>
+  <span class="o play" style="left:800px;top:832px">▶ ภาพหน้าจอ iPhone</span>
+  <div class="o c1">และจัดการเรื่องสำคัญ</div>
+  <div class="o c5"><span>ช่วยติดต่อ และแจ้งเตือน</span><span>คนในครอบครัว</span></div>
+  <span class="o soon">เร็วๆ นี้</span>
+
+  <span id="privacy" style="position:absolute;top:1100px"></span>
+  <a class="o card-hot" href="npmt.html" style="left:40px;top:1262px;width:780px;height:94px;border-radius:20px" aria-label="ออกแบบมาเพื่อทุกช่วงวัย · NPMT"></a>
+  <a class="o npmt" href="npmt.html">ออกแบบตามกรอบวิจัย NPMT →</a>
+  <span class="o btn3">เปิดทดลองใช้เร็วๆ นี้ <span>→</span></span>
+  <a class="o hot footer-hot" href="solutions.html" style="left:470px;top:1396px;width:50px;height:20px"></a>
+  <a class="o hot footer-hot" href="business.html" style="left:528px;top:1396px;width:80px;height:20px"></a>
+  <span id="about" style="position:absolute;top:1380px"></span>
+  <span class="o foot">© 2026 NEXSPARC</span>
+</div>
+<script>
+  /* shrink the 1099 px page on narrower windows (above the phone cut-off) */
+  (function(){var f=document.getElementById('fit');
+    function fit(){var s=Math.min(1,window.innerWidth/1099);f.style.transform='scale('+s+')';f.style.marginBottom=(1431*(s-1))+'px';
+      if(window.innerWidth<760)location.replace('m.html'+location.hash);}
+    fit();window.addEventListener('resize',fit);})();
+</script>
+<script>
+  (function(){var b=document.getElementById('phs'),n=['1-home','2-menu','3-daily','4-learn','5-translate'],k=0;
+    n.forEach(function(x,i){var im=new Image();im.src='clips/phone/'+x+'.jpg';im.alt='';if(!i)im.className='on';b.appendChild(im);});
+    setInterval(function(){var ims=b.children;ims[k].className='';k=(k+1)%ims.length;ims[k].className='on';},2600);})();
+</script>
+<script src="clips.js"></script>
+</body>
+</html>

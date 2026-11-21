@@ -1,0 +1,356 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>ArisAI · NEXSPARC Intelligence</title>
+<meta name="description" content="ArisAI — a Thai-language voice assistant by NEXSPARC Intelligence.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800;1,800&family=IBM+Plex+Sans+Thai:wght@300;400;500;600&family=Prompt:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#040b1c;--text:#f1f6ff;--muted:#a9bbd9;--cyan:#22d3ee;--cyan2:#38bdf8;--line:rgba(110,180,255,.25);--card:rgba(18,38,78,.62)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;overflow-x:hidden}
+main{overflow-x:clip}
+body{color:var(--text);font-family:Prompt,Inter,system-ui,sans-serif;line-height:1.5;-webkit-font-smoothing:antialiased;overflow-x:hidden;
+  background:
+   radial-gradient(900px 620px at 78% 18%,rgba(40,90,200,.45),transparent 65%),
+   radial-gradient(700px 400px at 20% 46%,rgba(30,70,170,.35),transparent 70%),
+   radial-gradient(800px 500px at 50% 75%,rgba(20,50,120,.35),transparent 70%),
+   linear-gradient(180deg,#06112a 0%,#040b1c 40%,#050d22 100%)}
+.wrap{max-width:1100px;margin:0 auto;padding:0 36px;position:relative}
+a{color:inherit;text-decoration:none}
+svg.i{fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+
+/* ---------- nav ---------- */
+nav{position:relative;z-index:5}
+nav .wrap{display:flex;align-items:center;height:64px;padding-top:4px}
+.logo{display:flex;flex-direction:column;line-height:1;width:150px}
+.logo b{font-family:Inter;font-weight:800;font-size:20px;letter-spacing:.01em}
+.logo b em{font-style:normal;background:linear-gradient(135deg,#fff 40%,var(--cyan));-webkit-background-clip:text;background-clip:text;color:transparent}
+.logo small{font-family:Inter;font-weight:500;font-size:8.6px;letter-spacing:.47em;color:var(--cyan);margin-top:5px}
+.links{display:flex;gap:4px;margin-left:44px;font-size:14.5px}
+.links a{padding:7px 18px;border-radius:999px;color:#dbe6f8}
+.links a.on{background:rgba(60,110,200,.38);box-shadow:inset 0 0 0 1px rgba(120,180,255,.25);color:#fff}
+.links a:hover{color:#fff}
+.nr{margin-left:auto;display:flex;align-items:center;gap:22px}
+.lang{display:flex;align-items:center;gap:6px;background:none;border:0;color:#dbe6f8;font:500 13.5px Inter;cursor:pointer}
+.lang svg{width:18px;height:18px}
+.lang .car{width:10px;height:10px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border-radius:999px;font:500 15px Prompt;cursor:default;white-space:nowrap}
+.b-nav{padding:10px 20px;font-size:14.5px;border:1.5px solid var(--cyan);background:rgba(20,120,200,.18);box-shadow:0 0 16px rgba(34,211,238,.45),inset 0 0 12px rgba(34,211,238,.15)}
+.b-fill{padding:14px 30px;background:linear-gradient(90deg,#22d3ee,#3cc7f5);color:#04152d;font-weight:600;box-shadow:0 0 30px rgba(34,211,238,.55);cursor:pointer}
+.b-line{padding:13px 34px;border:1.5px solid rgba(200,225,255,.65);background:rgba(8,20,48,.35)}
+.b-fill .pl{width:20px;height:20px;border-radius:50%;background:#04152d;display:grid;place-items:center}
+.b-fill .pl::after{content:"";border-left:7px solid var(--cyan);border-top:4.5px solid transparent;border-bottom:4.5px solid transparent;margin-left:2px}
+
+/* ---------- hero ---------- */
+.hero{position:relative;height:430px}
+.hero-img{position:absolute;right:-40px;top:-14px;width:640px;z-index:0;
+  -webkit-mask-image:linear-gradient(90deg,transparent 0,#000 16%),linear-gradient(0deg,transparent 0,#000 14%);-webkit-mask-composite:source-in;
+  mask-image:linear-gradient(90deg,transparent 0,#000 16%),linear-gradient(0deg,transparent 0,#000 14%);mask-composite:intersect}
+.swoosh{position:absolute;left:-60px;right:-60px;top:170px;height:420px;z-index:0;pointer-events:none}
+.ht{position:relative;z-index:2;padding-top:30px;max-width:470px}
+.kick{font:500 12.5px Inter;letter-spacing:.42em;color:#c7d4ea}
+h1{position:relative;font:italic 800 96px/1 Inter;letter-spacing:-.035em;margin:12px 0 18px;display:inline-block}
+h1 span{display:inline-block;padding-right:.08em;background:linear-gradient(180deg,#5fd8ff,#1fb6f0);-webkit-background-clip:text;background-clip:text;color:transparent}
+h1 svg{position:absolute;left:150px;top:-6px;width:180px;height:90px;pointer-events:none}
+.ht h2{font:600 28px/1.32 Prompt}
+.ht p{font:300 16.5px/1.6 Prompt;color:#c4d2ea;margin:12px 0 26px}
+.cta{display:flex;gap:16px}
+.plat{display:flex;gap:30px;margin-top:22px;font:500 12.5px Inter;color:#cfdaee}
+.plat span{display:flex;align-items:center;gap:8px}
+.plat svg{width:15px;height:15px;fill:currentColor}
+
+/* ---------- devices ---------- */
+.dev{position:relative;height:420px;margin-top:6px;z-index:2}
+.disc{position:absolute;left:-10px;right:60px;bottom:22px;height:44px;border-radius:50%;
+  background:radial-gradient(ellipse at center,rgba(34,211,238,.35),rgba(34,211,238,.05) 60%,transparent 70%);
+  box-shadow:0 0 0 2px rgba(80,220,255,.85),0 0 30px rgba(34,211,238,.8),0 0 80px rgba(34,211,238,.4)}
+.lap{position:absolute;left:105px;width:600px;bottom:46px}
+.scr{height:300px;background:#081330;border:10px solid #151b2b;border-bottom-width:12px;border-radius:16px 16px 0 0;display:grid;grid-template-columns:108px 1fr;overflow:hidden;box-shadow:0 0 0 1px #2a3245}
+.base{height:14px;margin:0 -60px;background:linear-gradient(#d8dee9,#8d95a8 70%,#5b6273);border-radius:2px 2px 16px 16px}
+.base::after{content:"";display:block;width:90px;height:5px;margin:0 auto;background:#9aa2b4;border-radius:0 0 6px 6px}
+.side{background:#0a1736;padding:16px 8px;font-size:9.5px;color:#9db0d2;border-right:1px solid rgba(120,170,255,.12)}
+.side b{display:block;font:italic 800 15px Inter;color:#fff;margin:0 0 14px 8px}
+.side b span{color:var(--cyan)}
+.side div{display:flex;align-items:center;gap:8px;padding:6px 8px;border-radius:7px;margin-bottom:3px}
+.side div.on{background:rgba(50,110,230,.55);color:#fff}
+.side svg{width:12px;height:12px}
+.ms{position:relative;overflow:hidden;display:flex;flex-direction:column;align-items:center;padding:30px 16px 14px;
+  background:linear-gradient(180deg,#1c2b61 0%,#36407c 30%,#7b5a92 55%,#d48f86 70%,#5a4a7a 78%,#1a2348 100%)}
+.ms .mtn{position:absolute;left:0;right:0;top:94px;height:120px}
+.ms .top{position:absolute;right:12px;top:10px;display:flex;gap:10px;align-items:center}
+.ms .top svg{width:13px;height:13px;color:#fff}
+.ms .top i{width:20px;height:20px;border-radius:50%;background:url(hero.jpg) 46% 22%/240%;border:1.5px solid #fff}
+.ms h4{position:relative;font:500 15px/1.55 Prompt;text-align:center}
+.mrow{position:relative;display:flex;align-items:center;gap:6px;margin:18px 0 0}
+.mic{flex:none;width:64px;height:64px;border-radius:50%;display:grid;place-items:center;background:radial-gradient(circle,#0b2a5e,#06173a);border:2px solid #7fe7ff;box-shadow:0 0 22px #22d3ee,inset 0 0 12px rgba(34,211,238,.5)}
+.mic svg{width:26px;height:26px;color:#fff}
+.wv{display:flex;align-items:center;gap:2px;height:40px}
+.wv i{width:2px;border-radius:2px;background:#bff3ff;box-shadow:0 0 6px #22d3ee;animation:w 1.3s ease-in-out infinite}
+@keyframes w{0%,100%{transform:scaleY(.35)}50%{transform:scaleY(1)}}
+@media (prefers-reduced-motion:reduce){.wv i{animation:none}}
+.tl{position:relative;margin-top:auto;display:grid;grid-template-columns:repeat(4,1fr);gap:8px;width:100%}
+.tl div{background:rgba(12,26,62,.85);border:1px solid rgba(120,170,255,.3);border-radius:9px;padding:12px 4px 9px;font-size:9.5px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:7px}
+.tl svg{width:20px;height:20px;color:#fff}
+.ph{position:absolute;left:668px;bottom:30px;width:156px;height:290px;background:#0a1432;border:5px solid #20283a;border-radius:28px;box-shadow:0 0 0 1px #3a4358,0 25px 50px rgba(0,0,0,.55);overflow:hidden;display:flex;flex-direction:column;align-items:center;padding:12px 10px 0}
+.ph::before{content:"";position:absolute;top:6px;left:50%;width:44px;height:11px;margin-left:-22px;background:#000;border-radius:8px}
+.ph .hd{align-self:stretch;display:flex;justify-content:space-between;align-items:center;margin-top:12px;font:italic 800 11px Inter}
+.ph .hd span{color:var(--cyan)}
+.ph .hd svg{width:10px;height:10px}
+.ph .av{width:82px;height:82px;border-radius:50%;margin:18px 0 12px;background:url(hero.jpg) 46% 22%/240%;border:2px solid #7fe7ff;box-shadow:0 0 18px rgba(34,211,238,.7)}
+.ph .mic{width:40px;height:40px;margin-top:14px}
+.ph .mic svg{width:17px;height:17px}
+.ph .nav{margin-top:auto;align-self:stretch;display:grid;grid-template-columns:repeat(4,1fr);padding:8px 0 10px;border-top:1px solid rgba(120,170,255,.15);font-size:6.5px;color:#93a6c8;text-align:center}
+.ph .nav div{display:flex;flex-direction:column;align-items:center;gap:2px}
+.ph .nav div:first-child{color:var(--cyan)}
+.ph .nav svg{width:11px;height:11px}
+
+/* ---------- features ---------- */
+.sk{text-align:center;font:500 12.5px Inter;letter-spacing:.32em;color:var(--cyan);margin-top:14px}
+.sh{text-align:center;font:600 31px Prompt;margin:6px 0 26px}
+.cards{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+.card{position:relative;height:186px;border-radius:16px;padding:18px 15px;overflow:hidden;
+  background:linear-gradient(160deg,rgba(30,58,112,.72),rgba(12,28,62,.72));border:1px solid var(--line);box-shadow:inset 0 1px 0 rgba(255,255,255,.07),0 10px 30px rgba(0,0,0,.25)}
+.card>svg{width:28px;height:28px;color:#58c8ff;filter:drop-shadow(0 0 6px rgba(56,189,248,.6))}
+.card h3{font:600 15px 'IBM Plex Sans Thai',Prompt;margin:10px 0 2px;white-space:nowrap;letter-spacing:-.01em}
+.card p{font:400 12px/1.55 'IBM Plex Sans Thai',Prompt;color:#c6d3ea;white-space:nowrap}
+.card img{position:absolute;right:8px;bottom:2px;width:74px;
+  -webkit-mask-image:radial-gradient(ellipse 50% 50% at 50% 55%,#000 60%,transparent 100%);mask-image:radial-gradient(ellipse 50% 50% at 50% 55%,#000 60%,transparent 100%)}
+.card .play{position:absolute;right:12px;top:14px;font:600 11px Prompt;color:#04152d;background:linear-gradient(90deg,#20cdee,#3cc6f4);border-radius:999px;padding:2px 10px;box-shadow:0 0 12px rgba(34,211,238,.6)}
+.card .soon{position:absolute;right:12px;top:16px;font:500 11px Prompt;color:var(--cyan);border:1px solid rgba(34,211,238,.6);border-radius:999px;padding:2px 10px}
+
+.priv{position:relative;margin-top:18px;display:grid;grid-template-columns:1.8fr 1fr 1fr 1fr;align-items:center;border-radius:20px;padding:18px 0;
+  background:linear-gradient(90deg,rgba(18,72,128,.75),rgba(16,46,98,.7) 50%,rgba(14,36,80,.7));border:1px solid rgba(90,200,255,.45);box-shadow:0 0 30px rgba(34,211,238,.18),inset 0 1px 0 rgba(255,255,255,.08)}
+.priv>div{padding:6px 20px}
+.priv>div+div{border-left:1px solid rgba(140,190,255,.25)}
+.pl{display:flex;align-items:center;gap:18px}
+.pl img{width:84px;flex:none;-webkit-mask-image:radial-gradient(ellipse 50% 50% at 50% 50%,#000 65%,transparent 100%);mask-image:radial-gradient(ellipse 50% 50% at 50% 50%,#000 65%,transparent 100%)}
+.pl h3{font:600 19px/1.3 'IBM Plex Sans Thai',Prompt;white-space:nowrap}
+.pl p{font:400 12px/1.5 'IBM Plex Sans Thai',Prompt;white-space:nowrap;color:#c6d3ea;margin-top:6px}
+.priv svg{width:30px;height:30px;color:#58c8ff;filter:drop-shadow(0 0 6px rgba(56,189,248,.6))}
+.priv h4{font:600 14px/1.35 'IBM Plex Sans Thai',Prompt;white-space:nowrap;margin:8px 0 3px}
+.priv>div>p{font:400 11.5px 'IBM Plex Sans Thai',Prompt;white-space:nowrap;color:#c6d3ea}
+
+.ages{position:relative;margin-top:18px;display:grid;grid-template-columns:230px 1fr 1fr auto;align-items:center;border-radius:20px;overflow:hidden;height:96px;
+  background:linear-gradient(90deg,rgba(80,70,170,.75),rgba(48,58,140,.7) 45%,rgba(24,44,100,.7));border:1px solid rgba(160,150,255,.35);box-shadow:inset 0 1px 0 rgba(255,255,255,.08)}
+.ages img{height:96px;width:230px;object-fit:cover;-webkit-mask-image:linear-gradient(90deg,#000 72%,transparent);mask-image:linear-gradient(90deg,#000 72%,transparent)}
+.ages h3{font:600 19px Prompt}
+.ages .tx p{font:300 12.5px/1.5 Prompt;color:#d3dcf0;margin-top:2px}
+.ages ul{list-style:none;font:300 12px Prompt;color:#d3dcf0;border-left:1px solid rgba(180,190,255,.3);padding-left:30px;margin-left:10px}
+.ages li{display:flex;align-items:center;gap:9px;margin:3px 0}
+.ages li::before{content:"";flex:none;width:15px;height:15px;border-radius:50%;background:#22d3ee url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23062044' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 12.5l4 4 8-9'/%3E%3C/svg%3E") center/11px no-repeat}
+.ages .btn{margin-right:30px;padding:12px 22px;font-size:14px;gap:16px}
+.ages .btn::after{content:"→";font-size:16px}
+
+footer{margin-top:28px;border-top:1px solid rgba(120,170,255,.18);background:linear-gradient(180deg,rgba(8,18,40,.5),rgba(4,10,24,.8))}
+footer .wrap{display:flex;align-items:center;height:66px}
+footer .fl{margin-left:auto;margin-right:auto;display:flex;align-items:center;font:400 13px Prompt;color:#dbe6f8;transform:translateX(-75px)}
+footer .fl a+a{border-left:1px solid rgba(200,220,255,.35);margin-left:14px;padding-left:14px}
+footer small{font:400 11.5px Prompt;color:var(--muted)}
+
+/* ---------- smaller screens ---------- */
+@media (max-width:1060px){
+  .card h3,.card p,.pl h3,.pl p,.priv h4,.priv>div>p{white-space:normal}
+  .links{display:none}
+  .hero{height:auto}.hero-img{position:relative;right:auto;top:auto;display:block;width:100%;max-width:560px;margin:0 auto -40px;
+    -webkit-mask-image:radial-gradient(ellipse 60% 60% at 50% 45%,#000 55%,transparent 100%);mask-image:radial-gradient(ellipse 60% 60% at 50% 45%,#000 55%,transparent 100%)}
+  .ht{max-width:none}
+  .dev{transform:scale(.82);transform-origin:top left;margin-bottom:-76px}
+  .cards{grid-template-columns:repeat(3,1fr)}
+  .priv{grid-template-columns:1fr 1fr 1fr}.pl{grid-column:1/-1;padding-bottom:10px!important}.priv>div:nth-child(2){border-left:0}
+  .ages{grid-template-columns:200px 1fr;height:auto}.ages img{width:200px;height:100%}.ages ul{display:none}.ages .btn{grid-column:1/-1;margin:0 20px 16px;justify-self:start}
+  footer .fl{transform:none}
+}
+@media (max-width:640px){
+  .wrap{padding:0 16px}
+  .b-nav{display:none}
+  h1{font-size:68px}h1 svg{left:104px;width:130px;height:66px}
+  .ht h2{font-size:23px}
+  .cta{flex-direction:column;align-items:flex-start}
+  .dev{transform:scale(.4);margin-top:24px;margin-bottom:-252px}
+  .ht p br,.ht h2 br{display:none}
+  .cards{grid-template-columns:1fr}
+  .priv{grid-template-columns:1fr}.priv>div+div{border-left:0;padding-top:12px}
+  .ages{grid-template-columns:1fr}.ages img{width:100%;height:150px;-webkit-mask-image:none;mask-image:none}.ages .tx{padding:14px 20px 0}
+  footer .wrap{height:auto;flex-direction:column;gap:10px;padding:18px 16px}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="logo" href="#top"><b><em>NEXSPARC</em></b><small>INTELLIGENCE</small></a>
+    <div class="links">
+      <a href="#top" class="on" data-t="n1">หน้าแรก</a>
+      <a href="#features">ArisAI</a>
+      <a href="solutions.html" data-t="n2">โซลูชัน</a>
+      <a href="business.html" data-t="n3">สำหรับองค์กร</a>
+      <a href="#about" data-t="n4">เกี่ยวกับเรา</a>
+    </div>
+    <div class="nr">
+      <button class="lang" id="lang" aria-label="Language"><svg class="i" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg><span id="lc">TH</span><svg class="i car" viewBox="0 0 24 24" style="stroke-width:3"><path d="M6 9l6 6 6-6"/></svg></button>
+      <span class="btn b-nav" data-t="ncta">เปิดทดลองใช้เร็วๆ นี้</span>
+    </div>
+  </div>
+</nav>
+
+<main id="top">
+  <div class="wrap hero">
+    <img class="hero-img" src="hero.jpg" alt="">
+    <svg class="swoosh" viewBox="0 0 1200 420" preserveAspectRatio="none" aria-hidden="true">
+      <defs>
+        <linearGradient id="sg1" x1="0" x2="1"><stop offset="0" stop-color="#22d3ee" stop-opacity="0"/><stop offset=".35" stop-color="#38bdf8" stop-opacity=".55"/><stop offset=".75" stop-color="#8b5cf6" stop-opacity=".35"/><stop offset="1" stop-color="#22d3ee" stop-opacity="0"/></linearGradient>
+        <linearGradient id="sg2" x1="0" x2="1"><stop offset="0" stop-color="#3b82f6" stop-opacity="0"/><stop offset=".5" stop-color="#6366f1" stop-opacity=".35"/><stop offset="1" stop-color="#22d3ee" stop-opacity="0"/></linearGradient>
+      </defs>
+      <path d="M0 250 C 250 150, 420 330, 640 240 S 1000 120, 1200 200" fill="none" stroke="url(#sg1)" stroke-width="3"/>
+      <path d="M0 290 C 260 200, 460 360, 680 270 S 1020 170, 1200 240" fill="none" stroke="url(#sg2)" stroke-width="2"/>
+      <path d="M0 330 C 300 250, 500 380, 720 300 S 1040 220, 1200 280 L1200 420 L0 420z" fill="url(#sg2)" opacity=".25"/>
+    </svg>
+    <div class="ht">
+      <div class="kick">NEXSPARC INTELLIGENCE</div>
+      <h1>Aris<span>AI</span><svg viewBox="0 0 180 90" aria-hidden="true"><path d="M8 70 C 40 96, 150 80, 172 30 C 178 12, 150 4, 120 14" fill="none" stroke="#38bdf8" stroke-width="3" stroke-linecap="round" opacity=".9"/></svg></h1>
+      <h2 data-t="h2">ผู้ช่วยอัจฉริยะ ที่อยู่เคียงข้างคุณ<br>ในทุกวันของชีวิต</h2>
+      <p data-t="hp">คุยได้เป็นธรรมชาติภาษาไทย เข้าใจคุณ และลงมือช่วยจัดการ<br>เรื่องต่าง ๆ ในชีวิตประจำวัน ที่บ้านของคุณ</p>
+      <div class="cta">
+        <a class="btn b-fill" href="#features" data-tour="all"><span class="pl"></span><span data-t="c1">ดูตัวอย่างการใช้งาน</span></a>
+        <span class="btn b-line" data-t="c2">เปิดทดลองใช้เร็วๆ นี้</span>
+      </div>
+      <div class="plat">
+        <span><svg viewBox="0 0 24 24"><path d="M16.4 12.6c0-2.4 2-3.6 2.1-3.7-1.1-1.7-2.9-1.9-3.5-1.9-1.5-.2-2.9.9-3.7.9-.8 0-1.9-.9-3.2-.8-1.6 0-3.2 1-4 2.5-1.7 3-.4 7.4 1.2 9.8.8 1.2 1.8 2.5 3 2.4 1.2 0 1.7-.8 3.1-.8 1.5 0 1.9.8 3.2.8 1.3 0 2.2-1.2 3-2.4.9-1.4 1.3-2.7 1.3-2.8-.1 0-2.5-1-2.5-4M14 5.6c.7-.8 1.1-1.9 1-3-1 0-2.1.6-2.8 1.4-.6.7-1.2 1.8-1 2.9 1.1.1 2.1-.5 2.8-1.3"/></svg>macOS</span>
+        <span><svg viewBox="0 0 24 24"><path d="M16.4 12.6c0-2.4 2-3.6 2.1-3.7-1.1-1.7-2.9-1.9-3.5-1.9-1.5-.2-2.9.9-3.7.9-.8 0-1.9-.9-3.2-.8-1.6 0-3.2 1-4 2.5-1.7 3-.4 7.4 1.2 9.8.8 1.2 1.8 2.5 3 2.4 1.2 0 1.7-.8 3.1-.8 1.5 0 1.9.8 3.2.8 1.3 0 2.2-1.2 3-2.4.9-1.4 1.3-2.7 1.3-2.8-.1 0-2.5-1-2.5-4M14 5.6c.7-.8 1.1-1.9 1-3-1 0-2.1.6-2.8 1.4-.6.7-1.2 1.8-1 2.9 1.1.1 2.1-.5 2.8-1.3"/></svg>iOS</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="dev" aria-hidden="true" data-tour="all">
+      <div class="disc"></div>
+      <div class="lap">
+        <div class="scr">
+          <div class="side">
+            <b>Aris<span>AI</span></b>
+            <div class="on"><svg class="i" viewBox="0 0 24 24"><path d="M3 11l9-8 9 8v10H3z"/></svg><span data-t="s1">หน้าแรก</span></div>
+            <div><svg class="i" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg><span data-t="s2">แชท</span></div>
+            <div><svg class="i" viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg><span data-t="s3">งานของฉัน</span></div>
+            <div><svg class="i" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18M8 2v4M16 2v4"/></svg><span data-t="s4">ปฏิทิน</span></div>
+            <div><svg class="i" viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8z"/></svg><span data-t="s5">สุขภาพ</span></div>
+            <div><svg class="i" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg><span data-t="s6">การเรียนรู้</span></div>
+            <div><svg class="i" viewBox="0 0 24 24"><rect x="5" y="8" width="14" height="11" rx="3"/><path d="M12 4v4M9 13h.01M15 13h.01"/></svg><span data-t="s7">เอเจนต์</span></div>
+            <div><svg class="i" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg><span data-t="s8">ตั้งค่า</span></div>
+          </div>
+          <div class="ms">
+            <svg class="mtn" viewBox="0 0 400 120" preserveAspectRatio="none"><path d="M0 80 L40 50 L70 66 L120 22 L160 58 L200 40 L250 70 L300 30 L350 62 L400 44 L400 120 L0 120z" fill="#2a2f5e" opacity=".75"/><path d="M0 96 L60 70 L110 88 L170 60 L230 86 L290 64 L350 90 L400 74 L400 120 L0 120z" fill="#1a2148" opacity=".9"/><rect y="104" width="400" height="16" fill="#e8a898" opacity=".25"/></svg>
+            <div class="top"><svg class="i" viewBox="0 0 24 24"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9M13.7 21a2 2 0 0 1-3.4 0"/></svg><i></i></div>
+            <h4 data-t="hello">สวัสดีค่ะ<br>วันนี้อยากให้ Aris ช่วยอะไรคะ?</h4>
+            <div class="mrow"><div class="wv" data-n="22"></div><div class="mic"><svg class="i" viewBox="0 0 24 24"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 10a7 7 0 0 0 14 0M12 17v4"/></svg></div><div class="wv" data-n="22"></div></div>
+            <div class="tl">
+              <div><svg class="i" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18M8 2v4M16 2v4M8 13h2M12 13h2M8 17h2"/></svg><span data-t="t1">จัดตารางวันนี้</span></div>
+              <div><svg class="i" viewBox="0 0 24 24"><rect x="3" y="9" width="18" height="7" rx="3.5" transform="rotate(-45 12 12.5)"/><path d="M9.5 10l4.5 4.5"/></svg><span data-t="t2">เตือนกินยา</span></div>
+              <div><svg class="i" viewBox="0 0 24 24"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg><span data-t="t3">เปิดเพลงให้ฟัง</span></div>
+              <div><svg class="i" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M8 13h8M8 17h8"/></svg><span data-t="t4">สรุปข่าวให้ฟัง</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="base"></div>
+      </div>
+      <div class="ph">
+        <div class="hd"><span style="color:#fff">Aris<span>AI</span></span><svg class="i" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+        <div class="av"></div>
+        <div class="wv" data-n="30" style="height:26px"></div>
+        <div class="mic"><svg class="i" viewBox="0 0 24 24"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 10a7 7 0 0 0 14 0M12 17v4"/></svg></div>
+        <div class="nav">
+          <div><svg class="i" viewBox="0 0 24 24"><path d="M3 11l9-8 9 8v10H3z"/></svg><span data-t="s1">หน้าแรก</span></div>
+          <div><svg class="i" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg><span data-t="s2">แชท</span></div>
+          <div><svg class="i" viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg><span data-t="pn3">งาน</span></div>
+          <div><svg class="i" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg><span data-t="pn4">ฉัน</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section id="features" class="wrap">
+    <div class="sk">WHAT ARIS HELPS WITH</div>
+    <h2 class="sh" data-t="sh">Aris ช่วยคุณได้มากกว่าแค่ตอบคำถาม</h2>
+    <div class="cards">
+      <div class="card"><svg class="i" viewBox="0 0 24 24"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10M10 20v-5h4v5"/></svg>
+        <h3 data-t="k1h">ดูแลชีวิตประจำวัน</h3><p data-t="k1p">จัดตาราง เตือนนัดหมาย กินยา<br>และจัดการเรื่องสำคัญ</p><img src="i-cal.png" alt=""></div>
+      <div class="card"><svg class="i" viewBox="0 0 24 24"><path d="M22 9L12 4 2 9l10 5 10-5z"/><path d="M6 11v5c3 2.5 9 2.5 12 0v-5M22 9v6"/></svg>
+        <h3 data-t="k2h">การเรียนรู้</h3><p data-t="k2p">ช่วยอธิบาย ค้นคว้า สรุปเนื้อหา<br>และติวตามจังหวะของคุณ</p><img src="i-book.png" alt=""></div>
+      <div class="card"><svg class="i" viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8z"/><path d="M8 12h2l1-2 2 4 1-2h2"/></svg>
+        <h3 data-t="k3h">สุขภาพและความเป็นอยู่ดี</h3><p data-t="k3p">ดูข้อมูลสุขภาพ ให้คำแนะนำ<br>และเตือนการดูแลตนเอง</p><img src="i-heart.png" alt=""></div>
+      <div class="card"><svg class="i" viewBox="0 0 24 24"><path d="M4 4h12v16H6a2 2 0 0 1-2-2z"/><path d="M16 8h4v10a2 2 0 0 1-2 2h-2M7 8h6M7 12h6M7 16h4"/></svg>
+        <h3 data-t="k4h">ข่าวสารและความบันเทิง</h3><p data-t="k4p">ฟังข่าว สรุปประเด็นสำคัญ<br>ฟังเพลง เล่านิทาน และอีกมากมาย</p><img src="i-video.png" alt=""></div>
+      <div class="card"><svg class="i" viewBox="0 0 24 24"><circle cx="9" cy="7" r="4"/><path d="M1 21v-2a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v2M16 3.1a4 4 0 0 1 0 7.8M23 21v-2a4 4 0 0 0-3-3.9"/></svg>
+        <h3 data-t="k5h">ครอบครัวและการติดต่อ</h3><p data-t="k5p">ช่วยติดต่อ และแจ้งเตือน<br>คนในครอบครัว</p><span class="soon" data-t="soon">เร็วๆ นี้</span><img src="i-people.png" alt=""></div>
+    </div>
+
+    <div class="priv" id="privacy">
+      <div class="pl"><img src="i-shield.png" alt=""><div><h3 data-t="p0h">เป็นส่วนตัวและปลอดภัย<br>โดยการออกแบบ</h3><p data-t="p0p">ข้อมูลของคุณเป็นของคุณเสมอ<br>ควบคุมได้ เลือกได้ และใช้เท่าที่จำเป็น</p></div></div>
+      <div><svg class="i" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="1.5"/><path d="M1 20h22"/></svg><h4 data-t="p1h">ใช้งานภายในบ้าน<br>(On-Device)</h4><p data-t="p1p">ทำงานได้แม้ไม่ต่ออินเทอร์เน็ต</p></div>
+      <div><svg class="i" viewBox="0 0 24 24"><path d="M18 10h-1.3A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/><path d="M12 13v5M10 15l2-2 2 2"/></svg><h4 data-t="p2h">ใช้คลาวด์เมื่อจำเป็น<br>(Hybrid Cloud)</h4><p data-t="p2p">เรียกใช้ AI ขั้นสูงเฉพาะงาน</p></div>
+      <div><svg class="i" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg><h4 data-t="p3h">เลือกใช้ตามความต้องการ<br>(Your Choice)</h4><p data-t="p3p">ยืดหยุ่น ประหยัด และปลอดภัย</p></div>
+    </div>
+
+    <div class="ages" onclick="if(!event.target.closest('a,.btn'))location.href='npmt.html'" style="cursor:pointer">
+      <img src="family.jpg" alt="">
+      <div class="tx"><h3 data-t="a0h">ออกแบบมาเพื่อทุกช่วงวัย</h3><p><a href="npmt.html" style="color:#9fe7ff" data-t="npl">ออกแบบตามกรอบวิจัย NPMT →</a></p><p data-t="a0p">ใช้งานง่าย เหมาะสำหรับผู้สูงวัย ครอบครัว<br>การศึกษา และการทำงาน</p></div>
+      <ul><li data-t="a1">ตัวอักษรขนาดใหญ่ อ่านง่าย</li><li data-t="a2">สั่งงานด้วยเสียงเป็นธรรมชาติ</li><li data-t="a3">มีผู้ช่วยแนะนำการใช้งาน</li></ul>
+      <span class="btn b-fill" data-t="acta">เปิดทดลองใช้เร็วๆ นี้</span>
+    </div>
+  </section>
+</main>
+
+<footer id="about">
+  <div class="wrap">
+    <a class="logo" href="#top"><b><em>NEXSPARC</em></b><small>INTELLIGENCE</small></a>
+    <div class="fl"><a href="#features">ArisAI</a><a href="solutions.html" data-t="n2">โซลูชัน</a><a href="business.html" data-t="n3">สำหรับองค์กร</a><a href="#about" data-t="n4">เกี่ยวกับเรา</a></div>
+    <small data-t="foot">© 2026 NEXSPARC Intelligence</small>
+  </div>
+</footer>
+
+<script>
+(function(){
+  document.querySelectorAll('.wv').forEach(function(w){var n=+w.dataset.n;for(var i=0;i<n;i++){var b=document.createElement('i'),c=Math.abs(i-(n-1)/2)/(n/2);b.style.height=Math.round(8+30*(1-c)*(.45+.55*Math.abs(Math.sin(i*1.7))))+'px';b.style.animationDelay=(i*.05)+'s';w.appendChild(b);}});
+  var EN={n1:'Home',n2:'Solutions',n3:'For organizations',n4:'About us',ncta:'Early access coming soon',
+    h2:'An intelligent assistant by your side, <br>every day of your life',hp:'Talks naturally in Thai, understands you, and helps with <br>everyday things in your home.',
+    c1:'See it in action',c2:'Early access coming soon',
+    s1:'Home',s2:'Chat',s3:'My tasks',s4:'Calendar',s5:'Health',s6:'Learning',s7:'Agents',s8:'Settings',pn3:'Tasks',pn4:'Me',
+    hello:'Hello!<br>How can Aris help you today?',t1:'Today\'s plan',t2:'Medicine reminder',t3:'Play music',t4:'News briefing',
+    sh:'Aris does more than answer questions',
+    k1h:'Daily life',k1p:'Plans, appointment and medicine<br>reminders, and what matters',
+    k2h:'Learning',k2p:'Explains, researches, summarises<br>and tutors at your pace',
+    k3h:'Health & wellbeing',k3p:'Your health data, tips<br>and self-care reminders',
+    k4h:'News & entertainment',k4p:'News and key points, music,<br>stories and much more',
+    k5h:'Family & connection',k5p:'Reach out to and remind<br>the people in your family',soon:'Coming soon',
+    p0h:'Private and safe<br>by design',p0p:'Your data is always yours:<br>in your control, your choice, only what is needed',
+    p1h:'Runs at home<br>(On-Device)',p1p:'Works even without internet',
+    p2h:'Cloud when needed<br>(Hybrid Cloud)',p2p:'Advanced AI only for the task',
+    p3h:'Your choice<br>(Your Choice)',p3p:'Flexible, economical and safe',
+    a0h:'Designed for every age',a0p:'Easy for older adults, families,<br>study and work',a1:'Large, easy-to-read text',a2:'Natural voice commands',a3:'Built-in guidance',
+    acta:'Early access coming soon',playw:'▶ Watch',npl:'Designed on the NPMT research framework →',foot:'© 2026 NEXSPARC Intelligence'};
+  var TH={};document.querySelectorAll('[data-t]').forEach(function(e){if(!(e.dataset.t in TH))TH[e.dataset.t]=e.innerHTML;});
+  var cur='th';
+  function set(l){cur=l;document.documentElement.lang=l;var d=l==='en'?EN:TH;
+    document.querySelectorAll('[data-t]').forEach(function(e){if(d[e.dataset.t]!=null)e.innerHTML=d[e.dataset.t];});
+    document.getElementById('lc').textContent=l.toUpperCase();try{localStorage.setItem('lang',l);}catch(e){}}
+  document.getElementById('lang').onclick=function(){if(window.innerWidth>=760){location.href=cur==='en'?'index.html':'en.html';return;}if(false){try{localStorage.setItem('lang','th');}catch(e){}location.href='index.html';return;}set(cur==='th'?'en':'th');};   /* TH <-> EN; on a big screen TH = the picture page */
+  var s=null;try{s=localStorage.getItem('lang');}catch(e){}
+  var q=(new URLSearchParams(location.search)).get('lang');
+  set(q==='en'||q==='th'?q:(s||((navigator.language||'').toLowerCase().indexOf('th')===0?'th':'en')));
+})();
+</script>
+<script>
+  /* phcycle: the phone mock plays the real iPhone screenshots by itself */
+  (function(){var ph=document.querySelector('.ph');if(!ph)return;ph.innerHTML='';ph.style.padding='0';ph.style.background='#000';
+    var n=['1-home','2-menu','3-daily','4-learn','5-translate'],k=0;
+    n.forEach(function(x,i){var im=new Image();im.src='clips/phone/'+x+'.jpg';im.alt='';im.style.cssText='position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top;transition:opacity .6s;opacity:'+(i?0:1);ph.appendChild(im);});
+    setInterval(function(){var a=ph.children;a[k].style.opacity=0;k=(k+1)%a.length;a[k].style.opacity=1;},2600);})();
+</script>
+<script src="clips.js"></script>
+</body>
+</html>

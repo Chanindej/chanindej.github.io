@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>NPMT · ArisAI</title>
+<meta name="description" content="NPMT — Neuro/Physiological Mindfulness Theory: the research framework behind ArisAI's wellbeing features.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@300;400;500;600&family=Inter:wght@500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#040b1c;--text:#eef4ff;--muted:#a9bbd9;--cyan:#22d3ee;--gold:#f2c46d;--line:rgba(110,180,255,.22);--card:rgba(16,34,72,.55)}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:radial-gradient(900px 600px at 80% 0%,rgba(40,90,200,.35),transparent 65%),radial-gradient(700px 500px at 0% 40%,rgba(200,150,60,.10),transparent 70%),var(--bg);
+  color:var(--text);font-family:"IBM Plex Sans Thai",system-ui,sans-serif;line-height:1.7;-webkit-font-smoothing:antialiased}
+.wrap{max-width:920px;margin:0 auto;padding:0 24px}
+a{color:var(--cyan)}
+nav{border-bottom:1px solid rgba(110,180,255,.12)}
+nav .wrap{display:flex;align-items:center;height:60px;justify-content:space-between}
+nav b{font:800 17px Inter;letter-spacing:.02em}
+nav a.back{font-size:14px;text-decoration:none}
+header{padding:56px 0 24px}
+.k{font:500 12px Inter;letter-spacing:.32em;color:var(--cyan)}
+h1{font:800 clamp(56px,10vw,92px)/1 Inter;letter-spacing:-.02em;margin:10px 0 6px;background:linear-gradient(180deg,#fff,#9fe7ff);-webkit-background-clip:text;background-clip:text;color:transparent}
+.sub{font-size:clamp(19px,2.6vw,24px);font-weight:600}
+.en{font:500 13px Inter;letter-spacing:.22em;color:var(--cyan);margin-top:4px}
+.status{display:inline-block;margin-top:18px;font-size:13px;color:var(--gold);border:1px solid rgba(242,196,109,.55);border-radius:999px;padding:4px 14px}
+section{padding:26px 0}
+h2{font-size:22px;font-weight:600;margin-bottom:12px}
+h2 small{display:block;font:500 11.5px Inter;letter-spacing:.28em;color:var(--cyan);margin-bottom:4px}
+p{color:#d3def2;margin-bottom:10px}
+.q{font-size:clamp(18px,2.4vw,22px);font-weight:600;color:var(--gold);line-height:1.5;margin-bottom:14px}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px}
+.card h3{font-size:16px;font-weight:600;margin-bottom:4px}
+.card p{font-size:14px;margin:0;color:var(--muted)}
+.loop{display:flex;flex-wrap:wrap;gap:8px;align-items:center;font-weight:500}
+.loop span{border:1px solid var(--line);border-radius:999px;padding:6px 14px;background:rgba(20,50,100,.4)}
+.loop i{color:var(--cyan);font-style:normal}
+table{width:100%;border-collapse:collapse;font-size:14px}
+td,th{border-bottom:1px solid var(--line);padding:10px 8px;text-align:left;vertical-align:top}
+th{color:var(--cyan);font-weight:500;font-size:13px}
+.tier{font:700 12px Inter;border-radius:6px;padding:2px 8px;white-space:nowrap}
+.t1{background:rgba(94,230,160,.18);color:#7df0b4}.t2{background:rgba(242,196,109,.18);color:var(--gold)}.t3{background:rgba(139,92,246,.22);color:#c4b0ff}
+.box{border-left:3px solid var(--gold);background:rgba(242,196,109,.06);padding:14px 18px;border-radius:0 12px 12px 0}
+ol.refs{padding-left:20px;font-size:13.5px;color:var(--muted)}
+ol.refs li{margin-bottom:8px}
+footer{margin-top:30px;border-top:1px solid rgba(110,180,255,.12);padding:22px 0 30px;font-size:12.5px;color:var(--muted)}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:6px 0 22px}
+.stats div{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;text-align:center}
+.stats b{display:block;font:800 30px Inter;color:#9fe7ff}
+.stats span{font-size:13px;color:var(--muted)}
+.gh{font-size:16px;font-weight:600;margin:18px 0 10px;color:var(--gold)}
+.note{font-size:13.5px;color:var(--muted)}
+.gal{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.gal.g2{grid-template-columns:repeat(2,1fr)}
+.gal img{width:100%;border-radius:8px;border:1px solid var(--line);cursor:zoom-in;transition:transform .2s,box-shadow .2s;background:#fff}
+.gal img:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(34,211,238,.25)}
+.lang{background:none;border:1px solid rgba(110,180,255,.35);color:#dbe6f8;border-radius:999px;padding:4px 12px;font:500 13px Inter;cursor:pointer;margin-right:10px}
+.lb{position:fixed;inset:0;background:rgba(2,6,16,.92);display:none;align-items:center;justify-content:center;z-index:50;padding:20px;cursor:zoom-out}
+.lb.on{display:flex}.lb img{max-width:100%;max-height:100%;border-radius:6px}
+.author{background:linear-gradient(120deg,rgba(30,60,120,.6),rgba(16,34,72,.5));border:1px solid rgba(242,196,109,.35);border-radius:18px;padding:24px}
+.author h3{font-size:22px;color:var(--gold)}.author .role{color:#9fe7ff;font-size:14px;margin-bottom:12px}
+@media(max-width:640px){.stats{grid-template-columns:repeat(2,1fr)}.gal,.gal.g2{grid-template-columns:1fr}}
+.hero2{display:grid;grid-template-columns:1fr 300px;gap:36px;align-items:center}
+.cover{width:100%;border-radius:10px;border:1px solid rgba(242,196,109,.5);box-shadow:0 20px 60px rgba(0,0,0,.6),0 0 40px rgba(34,211,238,.18);cursor:zoom-in}
+.gal.g2 img[alt^="ปก"]{background:none;object-fit:cover;aspect-ratio:5/6}
+@media(max-width:760px){.hero2{grid-template-columns:1fr}.cover{max-width:280px;margin:0 auto}}
+@media(max-width:640px){.wrap{padding:0 16px}.grid{grid-template-columns:1fr}td,th{padding:8px 4px}}
+</style>
+</head>
+<body>
+<nav><div class="wrap"><b>NEXSPARC</b><span><button class="lang" id="lang" type="button">🌐 <span id="lc">TH</span></button> <a class="back" href="index.html" id="back">← ArisAI</a></span></div></nav>
+
+<header class="wrap hero2"><div class="htxt">
+  <div class="k">THE FRAMEWORK BEHIND ARIS HEALTH</div>
+  <h1>NPMT</h1>
+  <div class="sub"><span class="tr" data-en="A neuro-physiological theory of mindfulness and present-moment awareness">ทฤษฎีสรีรประสาทวิทยาแห่งสติและการรู้เท่าทันปัจจุบัน</span></div>
+  <div class="en">NEURO/PHYSIOLOGICAL MINDFULNESS THEORY</div>
+  <span class="status"><span class="tr" data-en="Book · Draft 02 · by Chanindej Vanijwongse · NEXSPARC Intelligence">หนังสือ ฉบับร่าง 02 · โดย ชนินทร์เดช วานิชวงศ์ · NEXSPARC Intelligence</span></span>
+</div><img class="cover" src="book/cover.jpg" alt="ปกหนังสือ NPMT โดย ชนินทร์เดช วานิชวงศ์" data-big="book/cover.jpg"></header>
+
+<section class="wrap">
+  <div class="q"><span class="tr" data-en="Does calm happen only in the mind — or is it a change that happens together in the brain, the nervous system, the heart, the breath and the body&#x27;s recovery systems?">ความสงบเกิดขึ้นเฉพาะในจิตใจ หรือเป็นการเปลี่ยนแปลงที่เกิดขึ้นพร้อมกันทั้งสมอง ระบบประสาท หัวใจ ลมหายใจ และระบบฟื้นตัวของร่างกาย?</span></div>
+  <p><span class="tr" data-en="NPMT proposes that mindfulness and calm may arise from the coordination of several body systems, not from a feeling separate from human biology. The book links inner experience to what can be observed, measured and tested — from the brain, the autonomic nervous system, breathing and the heart to self-regulation, recovery and the return to balance.">NPMT เสนอกรอบความคิดว่าสติและความสงบอาจเกิดจากการประสานงานของหลายระบบในร่างกาย มิใช่ความรู้สึกที่แยกขาดจากชีววิทยาของมนุษย์ หนังสือเชื่อมประสบการณ์ภายในเข้ากับสิ่งที่สังเกต วัด และทดสอบได้ ตั้งแต่สมอง ระบบประสาทอัตโนมัติ ลมหายใจ และหัวใจ ไปจนถึงการกำกับตนเอง การฟื้นตัว และการกลับคืนสู่สมดุล</span></p>
+  <p><span class="tr" data-en="NPMT never uses a single biomarker to judge who is “more mindful”, and does not offer calm as a replacement for medical care. Instead it builds hypotheses, mechanisms and conditions that can be tested or falsified.">NPMT ไม่ใช้ค่าชีวภาพเพียงค่าเดียวตัดสินว่าใคร “มีสติ” มากกว่าใคร และไม่เสนอความสงบแทนการรักษาทางการแพทย์ แต่สร้างสมมติฐาน กลไก และเงื่อนไขที่ตรวจสอบหรือหักล้างได้</span></p>
+  <div class="loop" style="margin-top:14px"><span class="tr" data-en="&lt;span&gt;Perception&lt;/span&gt;"><span>การรับรู้</span></span><i>→</i><span class="tr" data-en="&lt;span&gt;Self-regulation&lt;/span&gt;"><span>การกำกับตนเอง</span></span><i>→</i><span class="tr" data-en="&lt;span&gt;System coordination&lt;/span&gt;"><span>การประสานระบบ</span></span><i>→</i><span class="tr" data-en="&lt;span&gt;Restoring balance&lt;/span&gt;"><span>การฟื้นคืนสมดุล</span></span></div>
+</section>
+
+
+<section class="wrap" id="book">
+  <h2><small>INSIDE THE BOOK</small><span class="tr" data-en="Inside the book">ภายในหนังสือ</span></h2>
+  <div class="stats">
+    <div><b>467</b><span class="tr" data-en="&lt;span&gt;pages&lt;/span&gt;"><span>หน้า</span></span></div><div><b>22</b><span class="tr" data-en="&lt;span&gt;chapters · 4 parts&lt;/span&gt;"><span>บท · 4 ภาค</span></span></div><div><b>148</b><span class="tr" data-en="&lt;span&gt;cited studies (DOI)&lt;/span&gt;"><span>งานวิจัยอ้างอิง (DOI)</span></span></div><div><b>H1–H5</b><span class="tr" data-en="&lt;span&gt;falsifiable hypotheses&lt;/span&gt;"><span>สมมุติฐานที่หักล้างได้</span></span></div>
+  </div>
+  <h3 class="gh"><span class="tr" data-en="Front and back cover">ปกหน้าและปกหลัง</span></h3>
+  <div class="gal g2"><img data-big="book/cover.jpg" src="book/cover.jpg" alt="ปกหน้า" loading="lazy"><img data-big="book/back.jpg" src="book/back.jpg" alt="ปกหลัง" loading="lazy"></div>
+  <h3 class="gh"><span class="tr" data-en="Illustrations">ภาพประกอบ</span></h3>
+  <div class="gal">
+    <img data-big="book/p009.jpg" src="book/p009-s.jpg" alt="The NPMT Framework" loading="lazy">
+    <img data-big="book/p028.jpg" src="book/p028-s.jpg" alt="The networked brain" loading="lazy">
+    <img data-big="book/p061.jpg" src="book/p061-s.jpg" alt="Neuro-Restore Loop and glymphatic flow" loading="lazy">
+    <img data-big="book/p088.jpg" src="book/p088-s.jpg" alt="The networks of happiness" loading="lazy">
+    <img data-big="book/p107.jpg" src="book/p107-s.jpg" alt="Two profiles of positive well-being" loading="lazy">
+    <img data-big="book/p120.jpg" src="book/p120-s.jpg" alt="The integrated NPMT architecture" loading="lazy">
+  </div>
+  <h3 class="gh"><span class="tr" data-en="Formulas and calculations">สูตรและการคำนวณ</span></h3>
+  <p class="note"><span class="tr" data-en="Every index has a formula, defined symbols, a value range and a validation method — e.g. Mindfulness Quality Score (MQS), Glymphatic Support Score (GSS), HSS and GCI">ดัชนีทุกตัวมีสูตร นิยามสัญลักษณ์ ช่วงค่า และวิธีตรวจความตรง — เช่น Mindfulness Quality Score (MQS), Glymphatic Support Score (GSS), HSS และ GCI</span></p>
+  <div class="gal g2">
+    <img data-big="book/p049.jpg" src="book/p049-s.jpg" alt="MQS and MQL formulas" loading="lazy">
+    <img data-big="book/p050.jpg" src="book/p050-s.jpg" alt="GSS, HSS and GCI formulas" loading="lazy">
+  </div>
+  <h3 class="gh"><span class="tr" data-en="Structure of the book">โครงสร้างเล่ม</span></h3>
+  <div class="gal g2">
+    <img data-big="book/p002.jpg" src="book/p002-s.jpg" alt="Table of contents" loading="lazy">
+    <img data-big="book/p239.jpg" src="book/p239-s.jpg" alt="Last pages 466-467" loading="lazy">
+  </div>
+  <p class="note"><span class="tr" data-en="Sample pages from Draft 02 (contents and the last pages, 466–467) · click a picture to enlarge">ตัวอย่างบางหน้าจากฉบับร่าง 02 (สารบัญ และหน้าสุดท้าย 466–467) · กดที่รูปเพื่อดูขนาดใหญ่</span></p>
+</section>
+
+<section class="wrap">
+  <h2><small>FOUR COMPONENTS</small><span class="tr" data-en="Four components">องค์ประกอบสี่ส่วน</span></h2>
+  <div class="grid">
+    <div class="card"><h3>Neuro-Calmness Loop</h3><p><span class="tr" data-en="The nervous system&#x27;s calm-regulation loop — attention, rumination, coherent breathing and interoception">วงจรการกำกับความสงบในระบบประสาท — ความสนใจ การคิดวน การหายใจแบบ coherent และ interoception</span></p></div>
+    <div class="card"><h3>Physiological Synchrony</h3><p><span class="tr" data-en="Physiological synchrony between people — co-regulation in families and groups">ความสอดคล้องทางสรีรวิทยาระหว่างบุคคล — การกำกับร่วม (co-regulation) ในครอบครัวและกลุ่ม</span></p></div>
+    <div class="card"><h3>Glymphatic Support</h3><p><span class="tr" data-en="Sleep and brain recovery — studied as a research outcome, never claimed to be measured by a device">การนอนและการฟื้นตัวของสมอง — ศึกษาเป็นผลลัพธ์งานวิจัย ไม่ใช่สิ่งที่อ้างว่าวัดได้จากอุปกรณ์</span></p></div>
+    <div class="card"><h3>Bio-Calmness Indicators &amp; Dashboard</h3><p><span class="tr" data-en="Multi-signal indicators (HRV, breathing, sleep) as baseline → state → recovery, always with their uncertainty">ตัวชี้วัดหลายสัญญาณ (HRV การหายใจ การนอน) แบบ baseline → state → recovery พร้อมบอกความไม่แน่นอน</span></p></div>
+  </div>
+</section>
+
+<section class="wrap">
+  <h2><small>EVIDENCE TIERS</small><span class="tr" data-en="Evidence tiers — saying plainly what is established and what is still a hypothesis">ระดับหลักฐาน — บอกตรง ๆ ว่าอะไรพิสูจน์แล้ว อะไรยังเป็นสมมุติฐาน</span></h2>
+  <table>
+    <tr class="tr" data-en="&lt;th&gt;Tier&lt;/th&gt;&lt;th&gt;Meaning&lt;/th&gt;&lt;th&gt;Example in NPMT&lt;/th&gt;"><th>ระดับ</th><th>ความหมาย</th><th>ตัวอย่างใน NPMT</th></tr>
+    <tr><td><span class="tier t1">Tier 1</span></td><td><span class="tr" data-en="Fairly well-accepted evidence">หลักฐานได้รับการยอมรับค่อนข้างดี</span></td><td><span class="tr" data-en="The brain and body communicate both ways; breathing is linked to the heart; sleep plays a role in recovery">สมองและร่างกายสื่อสารสองทิศทาง ลมหายใจสัมพันธ์กับหัวใจ การนอนมีบทบาทต่อการฟื้นตัว</span></td></tr>
+    <tr><td><span class="tier t2">Tier 2</span></td><td><span class="tr" data-en="Early evidence, or results not yet consistent">หลักฐานเบื้องต้น หรือผลยังไม่สม่ำเสมอ</span></td><td><span class="tr" data-en="Effects of mindfulness training on HRV; physiological synchrony between people">ผลของการฝึกสติต่อ HRV, ความสอดคล้องทางสรีรวิทยาระหว่างบุคคล</span></td></tr>
+    <tr><td><span class="tier t3">Tier 3</span></td><td><span class="tr" data-en="Hypotheses / prototype tools of NPMT">สมมุติฐาน / เครื่องมือต้นแบบของ NPMT</span></td><td><span class="tr" data-en="Prototype indices such as Bio-Calm Happiness (BCH) — open to testing and falsification">ดัชนีต้นแบบ เช่น Bio-Calm Happiness (BCH) — เปิดให้ทดสอบและหักล้าง</span></td></tr>
+  </table>
+</section>
+
+<section class="wrap">
+  <h2><small>TESTABLE HYPOTHESES</small><span class="tr" data-en="Core hypotheses and falsification criteria">สมมุติฐานแกนกลางและเกณฑ์หักล้าง</span></h2>
+  <table>
+    <tr class="tr" data-en="&lt;th&gt;&lt;/th&gt;&lt;th&gt;Expected result&lt;/th&gt;&lt;th&gt;If this happens, revise or reject&lt;/th&gt;"><th></th><th>ผลที่คาด</th><th>ถ้าเกิดสิ่งนี้ ต้องแก้หรือปฏิเสธ</th></tr>
+    <tr><td><b>H1</b> Convergence</td><td><span class="tr" data-en="Inner experience, physiology and behaviour agree at least in part">ประสบการณ์ภายใน สรีรวิทยา และพฤติกรรมสอดคล้องกันอย่างน้อยบางส่วน</span></td><td><span class="tr" data-en="Only one indicator changes, again and again, unrelated to the others">เปลี่ยนแค่ตัวชี้วัดเดียวซ้ำ ๆ โดยไม่สัมพันธ์กับมิติอื่น</span></td></tr>
+    <tr><td><b>H2</b> Within-person reproducibility</td><td><span class="tr" data-en="Within-person patterns repeat under similar conditions">รูปแบบภายในบุคคลทำซ้ำได้ในเงื่อนไขใกล้เคียง</span></td><td><span class="tr" data-en="Results are less stable than the instruments&#x27; error">ผลไม่เสถียรเกินความคลาดเคลื่อนของเครื่องมือ</span></td></tr>
+    <tr><td><b>H3</b> Transfer</td><td><span class="tr" data-en="Skills transfer to emotion, recovery and real life">ทักษะถ่ายโอนสู่อารมณ์ การฟื้นตัว และชีวิตจริง</span></td><td><span class="tr" data-en="Effects appear only during paced breathing or while using a device">ได้ผลเฉพาะขณะหายใจตามจังหวะหรือขณะใช้อุปกรณ์</span></td></tr>
+    <tr><td><b>H4</b> Incremental validity</td><td><span class="tr" data-en="NPMT indices predict outcomes beyond standard measures">ดัชนี NPMT พยากรณ์ผลได้เพิ่มจากมาตรวัดมาตรฐาน</span></td><td><span class="tr" data-en="No added predictive validity, or not reproducible">ไม่เพิ่มความตรงเชิงพยากรณ์ หรือทำซ้ำไม่ได้</span></td></tr>
+    <tr><td><b>H5</b> Interpersonal synchrony</td><td><span class="tr" data-en="Physiological synchrony between people is meaningful in context">ความสอดคล้องทางสรีรวิทยาระหว่างบุคคลมีความหมายตามบริบท</span></td><td><span class="tr" data-en="Fully explained by a shared stimulus or movement alone">อธิบายได้ด้วยสิ่งเร้าร่วมหรือการเคลื่อนไหวเพียงอย่างเดียว</span></td></tr>
+  </table>
+</section>
+
+<section class="wrap">
+  <h2><small>HOW ARISAI USES NPMT</small><span class="tr" data-en="How ArisAI uses NPMT">ArisAI ใช้ NPMT อย่างไร</span></h2>
+  <div class="grid">
+    <div class="card"><h3><span class="tr" data-en="Device readings are “signals”">ค่าจากอุปกรณ์คือ “สัญญาณ”</span></h3><p><span class="tr" data-en="WHOOP / watch data show trends against your own baseline — never a diagnosis, never a ranking of people">ค่าจาก WHOOP / นาฬิกา ใช้ดูแนวโน้มเทียบกับค่าปกติของตัวเอง ไม่ใช้วินิจฉัย และไม่จัดอันดับคน</span></p></div>
+    <div class="card"><h3><span class="tr" data-en="Every number has a source">บอกที่มาทุกตัวเลข</span></h3><p><span class="tr" data-en="Each value shows its device, time and unit, separating sensor data, estimates and AI interpretation">ทุกค่าบอกอุปกรณ์ เวลา และหน่วย แยกค่าจากเซนเซอร์ ค่าประมาณ และการตีความของ AI</span></p></div>
+    <div class="card"><h3><span class="tr" data-en="Educate, don&#x27;t treat">ให้ความรู้ ไม่รักษา</span></h3><p><span class="tr" data-en="Self-care guidance and referral to professionals — no medication changes, no replacing a doctor">เน้นการดูแลตัวเองและแนะนำให้พบผู้เชี่ยวชาญ ไม่ปรับยา ไม่แทนคำแนะนำแพทย์</span></p></div>
+    <div class="card"><h3><span class="tr" data-en="Safety first">ปลอดภัยก่อน</span></h3><p><span class="tr" data-en="Mindfulness practice is not for everyone; there are stop rules for severe anxiety, confusion or unusual symptoms">การฝึกสติไม่ได้เหมาะกับทุกคน มีเกณฑ์หยุดเมื่อเกิดความวิตกรุนแรง สับสน หรืออาการผิดปกติ</span></p></div>
+  </div>
+</section>
+
+<section class="wrap">
+  <h2><small>OLDER ADULTS · PLANNED RESEARCH</small><span class="tr" data-en="Care for older adults — planned pilot study">แนวทางดูแลผู้สูงวัย — แผนวิจัยนำร่อง</span></h2>
+  <div class="box">
+    <p><span class="tr" data-en="&lt;b&gt;Intervention:&lt;/b&gt; 15 minutes of Bio-Calmness practice before sleep"><b>สิ่งที่จะทดสอบ:</b> การฝึก Bio-Calmness 15 นาทีก่อนนอน</span></p>
+    <p><span class="tr" data-en="&lt;b&gt;Outcomes:&lt;/b&gt; sleep (device and questionnaire), memory / cognition, and falls or adverse events"><b>ผลลัพธ์ที่วัด:</b> การนอน (วัดจากอุปกรณ์และแบบสอบถาม) ความจำ/การรู้คิด และการหกล้มหรือเหตุไม่พึงประสงค์</span></p>
+    <p><span class="tr" data-en="&lt;b&gt;Design:&lt;/b&gt; compared with an active control group · informed consent · monitoring and referral to professionals"><b>รูปแบบ:</b> เทียบกับกลุ่มควบคุมที่ทำกิจกรรมอื่น (active control) · ขอความยินยอม · มีการติดตามและส่งต่อผู้เชี่ยวชาญ</span></p>
+    <p style="margin:0;color:var(--gold)"><span class="tr" data-en="Status: study design stage, no results yet — we will publish results when real data exist">สถานะ: อยู่ในขั้นออกแบบการวิจัย ยังไม่มีผลการทดลอง — เราจะเผยแพร่ผลเมื่อมีข้อมูลจริง</span></p>
+  </div>
+</section>
+
+<section class="wrap">
+  <h2><small>SELECTED REFERENCES</small><span class="tr" data-en="Selected studies cited by NPMT">ตัวอย่างงานวิจัยที่ NPMT อ้างอิง</span></h2>
+  <ol class="refs">
+    <li>Tang, Y.-Y., Hölzel, B. K., &amp; Posner, M. I. (2015). The neuroscience of mindfulness meditation. <i>Nature Reviews Neuroscience</i>, 16, 213–225. <a href="https://doi.org/10.1038/nrn3916">doi:10.1038/nrn3916</a></li>
+    <li>Hölzel, B. K., et al. (2011). How does mindfulness meditation work? <i>Perspectives on Psychological Science</i>, 6(6), 537–559. <a href="https://doi.org/10.1177/1745691611419671">doi:10.1177/1745691611419671</a></li>
+    <li>Brown, L., et al. (2021). The effects of mindfulness and meditation on vagally mediated heart rate variability: A meta-analysis. <i>Psychosomatic Medicine</i>, 83(6), 631–640. <a href="https://doi.org/10.1097/PSY.0000000000000900">doi:10.1097/PSY.0000000000000900</a></li>
+    <li>Laborde, S., Mosley, E., &amp; Thayer, J. F. (2017). Heart rate variability and cardiac vagal tone in psychophysiological research. <i>Frontiers in Psychology</i>, 8, 213. <a href="https://doi.org/10.3389/fpsyg.2017.00213">doi:10.3389/fpsyg.2017.00213</a></li>
+    <li>Keating, B. A., et al. (2025). Neurofluid circulation changes during a focused attention style of mindfulness meditation. <i>PNAS</i>, 122(49), e2504961122. <a href="https://doi.org/10.1073/pnas.2504961122">doi:10.1073/pnas.2504961122</a></li>
+    <li>Lutz, A., et al. (2004). Long-term meditators self-induce high-amplitude gamma synchrony during mental practice. <i>PNAS</i>, 101(46), 16369–16373. <a href="https://doi.org/10.1073/pnas.0407401101">doi:10.1073/pnas.0407401101</a></li>
+    <li>Farias, M., et al. (2020). Adverse events in meditation practices and meditation-based therapies: A systematic review. <i>Acta Psychiatrica Scandinavica</i>, 142(5), 374–393. <a href="https://doi.org/10.1111/acps.13225">doi:10.1111/acps.13225</a></li>
+  </ol>
+</section>
+
+
+<section class="wrap" id="author">
+  <h2><small>AUTHOR &amp; COMPANY</small><span class="tr" data-en="Author and company">ผู้เขียนและบริษัท</span></h2>
+  <div class="author">
+    <div>
+      <span class="tr" data-en="&lt;h3&gt;Chanindej Vanijwongse&lt;/h3&gt;"><h3>ชนินทร์เดช วานิชวงศ์</h3></span>
+      <p class="role"><span class="tr" data-en="Author of NPMT · Founder, NEXSPARC Intelligence · Developer of ArisAI">ผู้เขียน NPMT · ผู้ก่อตั้ง NEXSPARC Intelligence · ผู้พัฒนา ArisAI</span></p>
+      <p><span class="tr" data-en="NPMT is the foundation of NEXSPARC Intelligence&#x27;s health and well-being work — ArisAI puts it into practice, from reading wearables and showing the source and uncertainty of every number to its safety rules.">NPMT คือฐานคิดของงานด้านสุขภาพและความเป็นอยู่ที่ดีของ NEXSPARC Intelligence — ArisAI นำกรอบนี้มาใช้จริง ตั้งแต่การอ่านค่าจากอุปกรณ์สวมใส่ การบอกที่มาและความไม่แน่นอนของทุกตัวเลข ไปจนถึงกติกาความปลอดภัย</span></p>
+      <p><span class="tr" data-en="A scientific way of working: every claim has a hypothesis and a falsification test, evidence tiers are kept separate, published research is cited, and the work is open to external expert review.">วิธีทำงานแบบวิทยาศาสตร์: ทุกข้อเสนอมีสมมุติฐานและเกณฑ์หักล้าง แยกระดับหลักฐานชัดเจน อ้างอิงงานวิจัยที่ตีพิมพ์ และเปิดรับการตรวจสอบจากผู้เชี่ยวชาญภายนอก</span></p>
+    </div>
+  </div>
+</section>
+
+<footer><div class="wrap"><span class="tr" data-en="NPMT is a newly proposed theoretical framework — not a diagnostic method, not a standard of care, and not a substitute for advice from a doctor or specialist · Draft book, awaiting external expert review · © 2026 NEXSPARC Intelligence">NPMT เป็นกรอบทฤษฎีที่เสนอใหม่ ไม่ใช่วิธีวินิจฉัยโรค ไม่ใช่มาตรฐานการรักษา และไม่ใช้แทนคำแนะนำจากแพทย์หรือผู้เชี่ยวชาญ · หนังสือฉบับร่าง รอการทบทวนจากผู้เชี่ยวชาญภายนอก · © 2026 NEXSPARC Intelligence</span></div></footer>
+<div class="lb" id="lb"><img alt=""></div>
+<script>
+(function(){var lb=document.getElementById('lb'),im=lb.querySelector('img');
+document.querySelectorAll('.gal img,.cover').forEach(function(i){i.onclick=function(){im.src=i.dataset.big;im.alt=i.alt;lb.classList.add('on');};});
+lb.onclick=function(){lb.classList.remove('on');im.removeAttribute('src');};
+document.addEventListener('keydown',function(e){if(e.key==='Escape')lb.onclick();});})();
+</script>
+<script>
+(function(){var cur='th',els=[].slice.call(document.querySelectorAll('.tr'));
+els.forEach(function(e){e.dataset.th=e.innerHTML;});
+function set(l){cur=l;document.documentElement.lang=l;els.forEach(function(e){e.innerHTML=l==='en'?e.dataset.en:e.dataset.th;});
+ document.getElementById('lc').textContent=l.toUpperCase();document.getElementById('back').href=l==='en'?'en.html':'index.html';try{localStorage.setItem('lang',l);}catch(e){}}
+document.getElementById('lang').onclick=function(){set(cur==='th'?'en':'th');};
+var q=(new URLSearchParams(location.search)).get('lang'),s=null;try{s=localStorage.getItem('lang');}catch(e){}
+set(q==='en'||q==='th'?q:(s||((navigator.language||'').toLowerCase().indexOf('th')===0?'th':'en')));})();
+</script>
+</body>
+</html>
