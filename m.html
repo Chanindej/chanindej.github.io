@@ -337,7 +337,7 @@ footer small{font:400 11.5px Prompt;color:var(--muted)}
   var cur='th';
   function set(l){cur=l;document.documentElement.lang=l;var d=l==='en'?EN:TH;
     document.querySelectorAll('[data-t]').forEach(function(e){if(d[e.dataset.t]!=null)e.innerHTML=d[e.dataset.t];});
-    document.getElementById('lc').textContent=l==='en'?'TH':'EN';   /* บอส: the button names the language you go to */try{localStorage.setItem('lang',l);}catch(e){}}
+    document.getElementById('lc').textContent=l==='en'?'TH':'EN';document.querySelectorAll('a[href^="npmt.html"],a[href^="solutions.html"],a[href^="business.html"]').forEach(function(a){a.href=a.getAttribute('href').split('?')[0]+'?lang='+l;});   /* บอส: the button names the language you go to */try{localStorage.setItem('lang',l);}catch(e){}}
   document.getElementById('lang').onclick=function(){if(window.innerWidth>=760){location.href=cur==='en'?'index.html':'en.html';return;}if(false){try{localStorage.setItem('lang','th');}catch(e){}location.href='index.html';return;}set(cur==='th'?'en':'th');};   /* TH <-> EN; on a big screen TH = the picture page */
   var s=null;try{s=localStorage.getItem('lang');}catch(e){}
   var q=(new URLSearchParams(location.search)).get('lang');
