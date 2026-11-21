@@ -98,7 +98,7 @@ footer{margin-top:30px;border-top:1px solid rgba(110,180,255,.12);padding:22px 0
 (function(){var cur='th',els=[].slice.call(document.querySelectorAll('.tr'));
 els.forEach(function(e){e.dataset.th=e.innerHTML;});
 function set(l){cur=l;document.documentElement.lang=l;els.forEach(function(e){e.innerHTML=l==='en'?e.dataset.en:e.dataset.th;});
- document.getElementById('lc').textContent=l.toUpperCase();document.getElementById('home').href=l==='en'?'en.html':'index.html';try{localStorage.setItem('lang',l);}catch(e){}}
+ document.getElementById('lc').textContent=l==='en'?'TH':'EN';   /* บอส: the button names the language you go to */document.getElementById('home').href=l==='en'?'en.html':'index.html';try{localStorage.setItem('lang',l);}catch(e){}}
 document.getElementById('lang').onclick=function(){set(cur==='th'?'en':'th');};
 var q=(new URLSearchParams(location.search)).get('lang'),s=null;try{s=localStorage.getItem('lang');}catch(e){}
 set(q==='en'||q==='th'?q:(s||((navigator.language||'').toLowerCase().indexOf('th')===0?'th':'en')));})();
